@@ -36,7 +36,7 @@ public class FragmentOne extends Fragment{
 
     ArrayList<HashMap<String, String>> jsonNews;
 
-    List<News> camNews;// = new ArrayList<>();
+    ArrayList<News> camNews;// = new ArrayList<>();
 
 
 
@@ -51,7 +51,7 @@ public class FragmentOne extends Fragment{
         super.onCreate(savedInstanceState);
 
         jsonNews = new ArrayList<>();
-        camNews = new ArrayList<News>();
+        camNews = new ArrayList<>();
         new GetNews().execute();
         //News nw = new News("Facebook reports jumps in profit", "lorem ipsum doler ammet", "23 August, 2017");
         //nw.save();
@@ -106,20 +106,23 @@ public class FragmentOne extends Fragment{
                         JSONObject c = newss.getJSONObject(i);
 
                         String news_title = c.getString("news_title");
-                        String news_date = c.getString("news_date");
                         String news_text = c.getString("news_text");
+                        String news_date = c.getString("news_date");
+
 
 
                         HashMap<String, String> news = new HashMap<>();
                         // adding each child node to HashMap key => value
                         news.put("news_title", news_title);
-                        news.put("news_date", news_date);
                         news.put("news_text", news_text);
+                        news.put("news_date", news_date);
+
                         System.out.println(news_text);
                         camNews.add(new News(news_title, news_date, news_text));
-                        System.out.println(camNews);
+                        System.out.println();
                         // adding contact to contact list
                         jsonNews.add(news);
+                        System.out.println(jsonNews);
                     }
                 } catch (final JSONException e) {
                     Log.e(TAG, "Json parsing error: " + e.getMessage());
