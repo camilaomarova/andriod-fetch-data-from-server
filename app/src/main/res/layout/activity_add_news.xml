@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_news"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#F2F2F2"
+    tools:context="camcompany.camnews.addNews"
+    android:orientation="vertical">
+
+    <EditText
+        android:layout_marginBottom="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addTitle"
+        android:background="#FFF"
+        android:hint="News title">
+    </EditText>
+
+    <EditText
+        android:layout_marginBottom="20px"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:id="@+id/addText"
+        android:background="#FFF"
+        android:hint="News text">
+    </EditText>
+
+    <EditText
+        android:layout_marginBottom="20px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/addDate"
+        android:background="#FFF"
+        android:hint="News date"/>
+
+    <Button
+        android:text="ADD NEWS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/addNews"
+      />
+
+    <Button
+        android:text="DELETE ALL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/delete" />
+
+</LinearLayout>
